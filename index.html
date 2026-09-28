@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Glory Sherin S — Mobile & Full-Stack Developer</title>
+<meta name="description" content="Glory Sherin S, mobile and full-stack developer. React Native, SwiftUI, FastAPI, Django and Azure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff7e6;--ink:#151515;--card:#fff;--soft:#f1e7cf;--pink:#ff4d8d;--yellow:#ffd23f;--blue:#2f4bf0;--green:#2ee59d;--focus:#3d5afe;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14121c;--ink:#f6f2ff;--card:#1f1b2e;--soft:#2a2540;--focus:#ffd23f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14121c;--ink:#f6f2ff;--card:#1f1b2e;--soft:#2a2540;--focus:#ffd23f;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Space Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+img,video{max-width:100%;display:block}
+[hidden]{display:none!important}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-60px;z-index:10;background:var(--yellow);color:#151515;border:3px solid #151515;border-radius:10px;padding:8px 14px;font-weight:700;text-decoration:none}
+.skip:focus{top:12px}
+a:focus-visible,button:focus-visible,video:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.case a:focus-visible,.case button:focus-visible{outline-color:#151515}
+
+header nav{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 16px;padding:18px 0;font-weight:700}
+header nav ul{display:flex;flex-wrap:wrap;gap:4px 16px;list-style:none;margin:0;padding:0}
+header nav a{color:var(--ink);text-decoration:none;font-size:15px;padding:4px 0}
+header nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.logo{font-size:18px}
+
+h1{font-size:clamp(38px,8vw,80px);line-height:1.05;margin:30px 0 18px;letter-spacing:-.03em}
+h1 .a{background:#d81b60;color:#fff;padding:0 .15em;display:inline-block;transform:rotate(-2deg)}
+h1 .b{background:var(--yellow);color:#151515;padding:0 .15em;display:inline-block;transform:rotate(1.5deg)}
+.lead{font-size:19px;max-width:640px}
+.btn{display:inline-block;margin:12px 10px 0 0;padding:12px 22px;border:3px solid var(--ink);border-radius:14px;font-weight:700;text-decoration:none;color:#151515;background:var(--green);box-shadow:4px 4px 0 var(--ink);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn.o{background:var(--card);color:var(--ink)}
+h2{font-size:clamp(28px,5vw,44px);margin:64px 0 6px;letter-spacing:-.02em;scroll-margin-top:20px}
+.sub{margin:0 0 24px}
+
+.case{border:3px solid var(--ink);border-radius:24px;box-shadow:8px 8px 0 var(--ink);padding:26px;margin-bottom:34px;display:grid;grid-template-columns:1.15fr 1fr;gap:28px;color:#151515}
+@media(max-width:820px){.case{grid-template-columns:1fr}}
+.k{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.case h3{font-size:32px;margin:4px 0 8px}
+.case h4{margin:18px 0 4px;font-size:15px;text-transform:uppercase;letter-spacing:.05em}
+.case ul{margin:4px 0 0;padding-left:20px}
+.chips{list-style:none;padding:0!important;margin:14px 0 0}
+.chips li{display:inline-block;background:#fff;border:2px solid #151515;border-radius:99px;padding:2px 12px;margin:4px 6px 0 0;font-size:13px;font-weight:700}
+.stores{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.store{display:inline-flex;align-items:center;gap:8px;background:#151515;color:#fff;text-decoration:none;border-radius:12px;padding:10px 16px;font-weight:700;font-size:14px;line-height:1.25}
+.store small{display:block;font-size:11px;font-weight:500}
+.store:hover{background:#333}
+
+/* media: every slot shows its label until the real file loads */
+.media{display:flex;flex-direction:column;gap:14px;align-items:center;margin:0}
+.phones{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;list-style:none;padding:0!important;margin:0!important}
+.shot{position:relative;margin:0;overflow:hidden;display:grid;place-items:center;text-align:center;font-weight:700;background:repeating-linear-gradient(45deg,#ffffffaa,#ffffffaa 8px,#ffffff55 8px,#ffffff55 16px)}
+.shot img,.shot video{width:100%;height:100%;object-fit:cover}
+.shot .ph{display:none;padding:6px}
+.shot.missing img,.shot.missing video{display:none}
+.shot.missing .ph{display:block}
+.phone{width:112px;aspect-ratio:9/19.5;border:4px solid #151515;border-radius:20px;font-size:11px}
+.phones.four{display:grid;grid-template-columns:repeat(4,1fr);width:100%;gap:8px}
+.phones.four .phone{width:100%;border-width:3px;border-radius:14px}
+.phone.r16{width:128px;aspect-ratio:780/1387;border-radius:16px}
+.vid{width:100%;aspect-ratio:16/9;border:4px solid #151515;border-radius:16px;background:#151515;color:#fff;font-size:14px}
+.vid video{object-fit:contain;background:#151515}
+.mac{width:100%;aspect-ratio:16/10;border:4px solid #151515;border-radius:14px;padding-top:22px;background:#151515}
+.mac.missing{background:repeating-linear-gradient(45deg,#ffffffaa,#ffffffaa 8px,#ffffff55 8px,#ffffff55 16px);border-top-width:26px}
+
+.mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;list-style:none;padding:0;margin:0}
+.m{background:var(--card);border:3px solid var(--ink);border-radius:18px;padding:18px;box-shadow:5px 5px 0 var(--ink);display:flex;flex-direction:column}
+.m .gif{aspect-ratio:16/9;border:3px solid var(--ink);border-radius:10px;background:var(--soft);font-size:12px;margin-bottom:12px;color:var(--ink)}
+.m .gif video,.m .gif img{object-fit:cover;object-position:top}
+.m .gif.tall{aspect-ratio:4/5}
+.m .gif.tall video{object-fit:contain;object-position:center}
+.macwin{margin:0;border-radius:12px;overflow:hidden;background:#fff;border:3px solid #151515;box-shadow:5px 5px 0 #151515}
+.macwin img{width:100%;display:block}
+.macgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;list-style:none;padding:0!important;margin:0!important}
+.thumbs{display:flex;gap:8px;list-style:none;padding:0;margin:0 0 12px}
+.thumbs li{flex:1}
+.thumbs img{width:100%;aspect-ratio:9/19.5;object-fit:cover;object-position:top;border:2px solid var(--ink);border-radius:10px}
+.m h3{margin:0 0 4px}.m p{margin:0 0 10px;font-size:15px}
+.m code{font-size:12px;font-weight:700;background:var(--yellow);color:#151515;padding:2px 8px;border-radius:6px;align-self:flex-start}
+.m .gh{margin-top:auto;padding-top:10px;color:var(--ink);font-weight:700}
+.playbtn{position:absolute;right:8px;bottom:8px;border:2px solid #151515;background:#fff;color:#151515;border-radius:99px;font:700 12px/1 inherit;font-family:inherit;padding:6px 10px;cursor:pointer}
+.shot.missing .playbtn{display:none}
+
+.about{background:var(--blue);color:#fff;border:3px solid var(--ink);border-radius:22px;padding:28px;box-shadow:8px 8px 0 var(--ink);font-size:18px}
+.about p{margin:0}
+.sk{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;list-style:none;padding:0;margin:0}
+.sk li{background:var(--card);border:3px solid var(--ink);border-radius:16px;padding:16px;box-shadow:4px 4px 0 var(--ink)}
+.sk h3{font-size:17px;margin:0}.sk p{margin:4px 0 0;font-size:14px}
+footer{margin-top:70px;padding:28px 0;border-top:3px solid var(--ink);text-align:center;font-weight:700}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="w">
+<header>
+<nav aria-label="Primary">
+<a class="logo" href="#top" style="color:var(--ink);text-decoration:none">glory.<span class="sr-only"> Home</span></a>
+<ul>
+<li><a href="#work">Work</a></li>
+<li><a href="#side">Side projects</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<main id="main" tabindex="-1">
+<section aria-labelledby="top">
+<h1 id="top">I build <span class="a">mobile apps</span> people <span class="b">rely on.</span></h1>
+<p class="lead">Mobile engineer shipping React Native and SwiftUI apps to the App Store and Google Play, now going full-stack with FastAPI, Django and Azure. I care about what users feel: fast screens, reliable chat and notifications that never fail.</p>
+<a class="btn" href="#work">View my work</a><a class="btn o" href="#contact">Contact me</a>
+</section>
+
+<section aria-labelledby="work">
+<h2 id="work">Professional work</h2>
+<p class="sub">Apps live on the App Store and Google Play.</p>
+
+<!-- CAMPEAGLE: drop files into assets/campeagle/ -->
+<article class="case" style="background:var(--yellow)" aria-labelledby="campeagle-h">
+<div>
+<p class="k">Production · React Native · iOS &amp; Android</p>
+<h3 id="campeagle-h">CampEagle</h3>
+<p>Camp Eagle Navigator is a camp management app that keeps campers' families and staff connected during the camp season. It puts schedules, messages, notifications and photos in one place, so families don't rely on scattered emails and shared drives.</p>
+<h4>Key features</h4>
+<ul><li>Daily schedule and home feed of camp updates</li><li>Interactive campus map with points of interest</li><li>Real-time messaging with offline support</li><li>Push notifications that open the right account and screen</li><li>Photo viewing and saving to the device</li></ul>
+<ul class="chips" aria-label="Tech stack"><li>React Native</li><li>FCM</li><li>FastAPI</li><li>Docker</li><li>AWS S3 + CloudFront</li></ul>
+<div class="stores">
+<!-- TODO: paste real store URLs -->
+<a class="store" href="TODO_CAMPEAGLE_APPSTORE_URL"><span><small>Download on the</small>App Store<span class="sr-only"> (CampEagle)</span></span></a>
+<a class="store" href="https://play.google.com/store/apps/details?id=org.campeagle.campeagle"><span><small>Get it on</small>Google Play<span class="sr-only"> (CampEagle)</span></span></a>
+</div>
+</div>
+<div class="media">
+<ul class="phones four" aria-label="CampEagle screenshots">
+<li><figure class="shot phone"><img src="assets/campeagle/home.jpg" alt="Camp Eagle Navigator home: session welcome card, Coming Up Next activity and photo highlights" loading="lazy"><figcaption class="ph">Screenshot<br>Home</figcaption></figure></li>
+<li><figure class="shot phone"><img src="assets/campeagle/schedule.jpg" alt="Camp Eagle Navigator schedule by day with activity, meeting and meal cards" loading="lazy"><figcaption class="ph">Screenshot<br>Schedule</figcaption></figure></li>
+<li><figure class="shot phone"><img src="assets/campeagle/photos.jpg" alt="Camp Eagle Navigator photo gallery filtered by session and day" loading="lazy"><figcaption class="ph">Screenshot<br>Photos</figcaption></figure></li>
+<li><figure class="shot phone"><img src="assets/campeagle/map.jpg" alt="Camp Eagle Navigator campus map with lodging, dining, parking and activity pins" loading="lazy"><figcaption class="ph">Screenshot<br>Map</figcaption></figure></li>
+</ul>
+</div>
+</article>
+
+<!-- GLORIETA: drop files into assets/glorieta/ -->
+<article class="case" style="background:var(--pink)" aria-labelledby="glorieta-h">
+<div>
+<p class="k">Production · React Native + FastAPI · iOS &amp; Android</p>
+<h3 id="glorieta-h">GlorietaNavigator</h3>
+<p>The official mobile app for Glorieta, built on the same platform as CampEagle. It gives attendees schedules, messaging and notifications, backed by the Navigator API on Azure. One shared codebase powers two separately branded apps.</p>
+<h4>Key features</h4>
+<ul><li>Personalized schedule for each camp session</li><li>Interactive campus map with activity locations</li><li>Messaging with staff and household push notifications</li><li>Separate branding, assets and CDN per app from one codebase</li></ul>
+<ul class="chips" aria-label="Tech stack"><li>React Native</li><li>FastAPI</li><li>Azure Functions</li><li>Cosmos DB</li></ul>
+<div class="stores">
+<!-- TODO: paste real store URLs -->
+<a class="store" href="https://apps.apple.com/us/app/glorieta-navigator/id6472544841"><span><small>Download on the</small>App Store<span class="sr-only"> (GlorietaNavigator)</span></span></a>
+<a class="store" href="https://play.google.com/store/apps/details?id=com.GlorietaNavigator.GlorietaNavigator"><span><small>Get it on</small>Google Play<span class="sr-only"> (GlorietaNavigator)</span></span></a>
+</div>
+</div>
+<div class="media">
+<ul class="phones" aria-label="GlorietaNavigator screenshots">
+<li><figure class="shot phone r16"><img src="assets/glorieta/store-2.jpg" alt="GlorietaNavigator home: a household notification card and a Message Staff button" loading="lazy"><figcaption class="ph">Screenshot<br>Home</figcaption></figure></li>
+<li><figure class="shot phone r16"><img src="assets/glorieta/store-4.jpg" alt="GlorietaNavigator schedule listing breakfast and morning wake-up with times and locations" loading="lazy"><figcaption class="ph">Screenshot<br>Schedule</figcaption></figure></li>
+<li><figure class="shot phone r16"><img src="assets/glorieta/store-3.jpg" alt="GlorietaNavigator campus map with activity pins" loading="lazy"><figcaption class="ph">Screenshot<br>Map</figcaption></figure></li>
+</ul>
+</div>
+</article>
+
+<!-- ELEPHAS: drop files into assets/elephas/ -->
+<article class="case" style="background:var(--green)" aria-labelledby="elephas-h">
+<div>
+<p class="k">Previous role · SwiftUI · macOS &amp; iOS · Aug 2024 – Jan 2026</p>
+<h3 id="elephas-h">Elephas AI</h3>
+<p>A personal AI knowledge assistant for Mac, iPhone and iPad. Users build a "Super Brain" from their PDFs, notes, web pages and recordings (20+ formats), then chat with it and get answers with cited sources. Privacy is a core promise: local-first indexing with an optional offline mode.</p>
+<h4>Product highlights</h4>
+<ul><li>Ask questions across your own documents and get cited answers</li><li>Super Command: summarize, rewrite, translate and fix grammar in any Mac app</li><li>AI keyboard on iOS for tone-aware writing in Mail, Messages and Slack</li><li>Syncs across Mac, iPhone and iPad; connects with Apple Notes, Notion and Zoom</li></ul>
+<ul class="chips" aria-label="Tech stack"><li>Swift</li><li>SwiftUI</li><li>macOS</li><li>iOS</li></ul>
+<div class="stores">
+<a class="store" href="https://elephas.app/"><span><small>Visit</small>elephas.app</span></a>
+<a class="store" href="https://apps.apple.com/us/app/elephas-secure-ai-for-files/id6444680023"><span><small>iPhone &amp; iPad on the</small>App Store<span class="sr-only"> (Elephas AI)</span></span></a>
+<a class="store" href="https://apps.apple.com/us/app/elephas-secure-ai-for-docs/id6741066105"><span><small>Download on the</small>Mac App Store<span class="sr-only"> (Elephas AI)</span></span></a>
+</div>
+</div>
+<div class="media">
+<figure class="macwin"><img src="assets/elephas/mac-chat.jpg" alt="Elephas on macOS: an answer about a document with cited source cards, beside the Knowledge Base panel showing 35 documents and connected sources" loading="lazy"></figure>
+<ul class="macgrid" aria-label="More Elephas macOS screens">
+<li><figure class="macwin"><img src="assets/elephas/mac-knowledge.jpg" alt="Elephas knowledge base: indexed web pages shown as a card grid, with Files, YouTube and Integrations sources" loading="lazy"></figure></li>
+<li><figure class="macwin"><img src="assets/elephas/mac-redaction.jpg" alt="Elephas Smart Redaction: 96 dates, addresses and phone numbers anonymized before cloud processing" loading="lazy"></figure></li>
+</ul>
+</div>
+</article>
+</section>
+
+<section aria-labelledby="side">
+<h2 id="side">Side projects</h2>
+<p class="sub">Things I built to learn and for fun.</p>
+<ul class="mini">
+<li class="m"><figure class="shot gif tall"><video preload="metadata" playsinline muted loop poster="assets/side/dots-connector.png" aria-label="Dots Connector gameplay: coloured paths drawn between matching dots across eight levels"><source src="assets/side/dots-connector.mp4" type="video/mp4"></video><button class="playbtn" type="button">Play demo</button><figcaption class="ph">Demo coming soon</figcaption></figure><h3>Dots Connector</h3><p>A puzzle game where you drag paths to join matching coloured dots without crossing. Levels are generated endlessly with a solution-first algorithm, so every puzzle is solvable, and difficulty adapts to how fast you play. Progress is saved on the device.</p><code>React Native · Expo · SVG · AsyncStorage</code><a class="gh" href="https://github.com/glorysherin/DotsConnector">View on GitHub<span class="sr-only">: Dots Connector</span> →</a></li>
+<li class="m"><figure class="shot gif tall"><video preload="metadata" playsinline muted loop poster="assets/side/expense-tracker.png" aria-label="Expense Tracker tour: expense list grouped by day, monthly summary chart, and settings"><source src="assets/side/expense-tracker.mp4" type="video/mp4"></video><button class="playbtn" type="button">Play demo</button><figcaption class="ph">Demo coming soon</figcaption></figure><h3>Expense Tracker</h3><p>Native iOS app to log spending by category. Expenses are grouped by day, and a monthly summary shows where the money went with a donut chart. You can choose the currency and a light or dark theme, and all data is stored offline with Core Data.</p>
+<ul class="thumbs" aria-label="Expense Tracker screenshots">
+<li><img src="assets/side/expense-tracker-list.png" alt="Expense list grouped by Today, Yesterday and date" loading="lazy"></li>
+<li><img src="assets/side/expense-tracker-tab1.png" alt="Monthly summary with category donut chart" loading="lazy"></li>
+<li><img src="assets/side/expense-tracker-tab2.png" alt="Settings for categories, currency and theme" loading="lazy"></li>
+</ul><code>Swift · SwiftUI · Core Data · Swift Charts</code><a class="gh" href="https://github.com/glorysherin/ExpenseTracker">View on GitHub<span class="sr-only">: Expense Tracker</span> →</a></li>
+<li class="m"><figure class="shot gif"><video preload="metadata" playsinline muted loop poster="assets/side/lms.png" aria-label="Learning Management System walkthrough: staff login, landing page, dashboard, blog and GPA calculator"><source src="assets/side/lms.mp4" type="video/mp4"></video><button class="playbtn" type="button">Play demo</button><figcaption class="ph">Demo coming soon</figcaption></figure><h3>Learning Management System</h3><p>College-wide LMS for Jaya Engineering College. It covers classrooms, attendance, MCQ exams with auto-marking, group chat, video meetings, notes, a blog and e-books, with separate student, staff and admin roles. A full-stack build from database schema to UI.</p><code>Django · PostgreSQL · JavaScript</code><a class="gh" href="https://github.com/glorysherin/Learning_Management_System">View on GitHub<span class="sr-only">: Learning Management System</span> →</a></li>
+</ul>
+</section>
+
+<section aria-labelledby="about">
+<h2 id="about">About me</h2>
+<div class="about"><p>I'm a mobile developer from Chennai who got curious about what sits behind the screen. I taught myself FastAPI, Django and Azure while shipping production apps, and I care about the details users feel: fast, reliable and never broken on a bad connection. I'm aiming for senior full-stack roles.</p></div>
+</section>
+
+<section aria-labelledby="bring">
+<h2 id="bring">What I bring</h2>
+<p class="sub">Not just tools, but what I have done with them.</p>
+<ul class="sk">
+<li><h3>React Native</h3><p>Offline-first chat, push notifications and one codebase for two branded apps.</p></li>
+<li><h3>Swift &amp; SwiftUI</h3><p>Native macOS and iOS features shipped at Elephas AI.</p></li>
+<li><h3>FastAPI</h3><p>Production APIs, JWT auth and payment integration.</p></li>
+<li><h3>Azure &amp; Cosmos DB</h3><p>Serverless functions, query tuning, indexing and partition design.</p></li>
+<li><h3>Django</h3><p>Backend for a new product, the Station app.</p></li>
+<li><h3>Security mindset</h3><p>Found and fixed credential and authorization gaps in a live API.</p></li>
+<li><h3>Docker, AWS S3 &amp; CloudFront</h3><p>Working with the production infrastructure behind the apps.</p></li>
+<li><h3>Problem solving</h3><p>Consistent DSA practice and a habit of tracing bugs to the root cause.</p></li>
+</ul>
+</section>
+
+<section aria-labelledby="contact">
+<h2 id="contact">Let's work together</h2>
+<p class="lead">Open to full-stack roles and freelance mobile projects.</p>
+<!-- TODO: real email, LinkedIn URL, resume PDF at assets/resume.pdf -->
+<a class="btn" href="mailto:TODO_EMAIL">Email me</a><a class="btn o" href="https://github.com/glorysherin">GitHub</a><a class="btn o" href="TODO_LINKEDIN_URL">LinkedIn</a><a class="btn o" href="assets/resume.pdf" data-optional>Resume <span class="sr-only">(PDF)</span></a>
+</section>
+</main>
+</div>
+<footer><div class="w">© 2026 Glory Sherin S</div></footer>
+
+<script>
+// Show the labelled placeholder for any image/video whose file isn't there yet
+document.querySelectorAll('.shot').forEach(function (fig) {
+  var img = fig.querySelector('img');
+  var vid = fig.querySelector('video');
+  if (img) {
+    img.addEventListener('error', function () { fig.classList.add('missing'); });
+    if (img.complete && img.naturalWidth === 0) fig.classList.add('missing');
+  }
+  if (vid) {
+    var src = vid.querySelector('source');
+    (src || vid).addEventListener('error', function () { fig.classList.add('missing'); });
+    if (vid.networkState === 3) fig.classList.add('missing');
+  }
+});
+
+// Side-project demos: play/pause with a real button, never autoplay (WCAG 2.2.2)
+document.querySelectorAll('.playbtn').forEach(function (btn) {
+  var vid = btn.parentNode.querySelector('video');
+  btn.setAttribute('aria-pressed', 'false');
+  btn.addEventListener('click', function () {
+    if (vid.paused) { vid.play(); } else { vid.pause(); }
+  });
+  vid.addEventListener('play', function () { btn.textContent = 'Pause demo'; btn.setAttribute('aria-pressed', 'true'); });
+  vid.addEventListener('pause', function () { btn.textContent = 'Play demo'; btn.setAttribute('aria-pressed', 'false'); });
+});
+
+// Hide links that still point at a TODO placeholder so visitors never hit a dead link
+document.querySelectorAll('a[href*="TODO_"]').forEach(function (a) { a.hidden = true; });
+
+// Links to local files (e.g. the resume) stay hidden until the file exists
+document.querySelectorAll('a[data-optional]').forEach(function (a) {
+  a.hidden = true;
+  fetch(a.href, { method: 'HEAD' }).then(function (r) { a.hidden = !r.ok; }).catch(function () {});
+});
+</script>
+</body>
+</html>
